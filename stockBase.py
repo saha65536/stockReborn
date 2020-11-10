@@ -100,7 +100,7 @@ class StockBase:
         paramV = result_profit[paramName]
         return float(paramV)
     
-    def exportFile(self,df):
+    def exportFile(self,df,name):
         self.makeDIR('./result')        
-        df.to_csv('result/result_'  + self.anaMonth + '.csv' ,index=False,sep=',') 
+        df.to_csv('result/result_'  + name + '.csv' ,index=False,sep=',') 
                     
